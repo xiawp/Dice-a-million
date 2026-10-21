@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Custom PreHead code is injected here -->
+    
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta charset="utf-8"/>
+
+        <!-- Builtin injector for disabling cache -->
+        <meta http-equiv="pragma" content="no-cache"/>
+
+        <!-- Set the title bar of the page -->
+        <title>dice a million</title>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABMLAAATCwAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/4GBgf+dnZ3/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/eXl5////////////mpqa/wEBAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP95eXn//////////////////////5mZmf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3l5ef////////////////////////////////+YmJj/AgIC/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/enp6////////////////////////////////////////////mpqa/wEBAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP95eXn//////////////////////////////////////////////////////5mZmf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3p6ev////////////////////////////////////////////////////////////////+YmJj/AQEB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/enp6////////////////////////////////////////////////////////////////////////////mpqa/wEBAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP96enr//////////////////////////////////////////////////////////////////////////////////////5mZmf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3p6ev////////////////////////////////////////////////////////////////////////////////////////////////+Xl5f/BQUF/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/e3t7///////////////////////////////////////////////////////////////////////////////////////////////////////5+fn/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP97e3v////////////////////////////////////////////////////////////////////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3t7e//////////////////////////////////////////////////////////////////////////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/e3t7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP97e3v//////////////////////////////////////////////////////////////////////8DAwP/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3x8fP//////////////////////////////////////////////////////////////////////ra2t/xMTE//l5eX////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/fHx8//////////////////////////////////////////////////////////////////////+ysrL/BgYG/wkJCf/r6+v////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP98fHz//////////////////////////////////////////////////////////////////////7Kysv8JCQn/AAAA/xEREf/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3x8fP//////////////////////////////////////////////////////////////////////sbGx/wgICP8AAAD/AAAA/xAQEP/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/fX19//////////////////////////////////////////////////////////////////////+xsbH/CQkJ/wAAAP8AAAD/AAAA/xAQEP/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP99fX3//////////////////////////////////////////////////////////////////////7Gxsf8ICAj/AAAA/wAAAP8AAAD/AAAA/xAQEP/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/319ff//////////////////////////////////////////////////////////////////////sLCw/wgICP8AAAD/AAAA/wAAAP8AAAD/AAAA/xAQEP/q6ur////////////////////////////////////////////y8vL/Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/fn5+//////////////////////////////////////////////////////////////////////+wsLD/CAgI/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xAQEP/u7u7////////////////////////////////////////////19fX/FxcX/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP+BgYH//////////////////////////////////////////////////////////////////////6ysrP8EBAT/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/w8PD//a2tr/7u7u/+7u7v/u7u7/7u7u/+7u7v/u7u7/7u7u/+zs7P/c3Nz/Kioq/xEREf8RERH/ERER/xEREf8RERH/ERER/xEREf8RERH/ERER/xEREf8RERH/EhIS/xgYGP9ubm7//////////////////////////////////////////////////////////////////////7Kysv8JCQn/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAf8SEhL/FBQU/xQUFP8UFBT/FBQU/xQUFP8UFBT/ExMT/w8PD/+Pj4//7Ozs/+zs7P/r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//s7Oz/8vLy/3R0dP8AAAD/ZmZm//7+/v////////////////////////////////////////////////////////////////+4uLj/DQ0N/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/3h4eP//////////////////////////////////////////////////////////////////////jIyM/wEBAf8AAAD/AAAA/2ZmZv//////////////////////////////////////////////////////////////////////urq6/w0NDf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/fHx8//////////////////////////////////////////////////////////////////////+Hh4f/AAAA/wAAAP8AAAD/AAAA/wAAAP9nZ2f//f39/////////////////////////////////////////////////////////////////7i4uP8NDQ3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP99fX3//////////////////////////////////////////////////////////////////////4eHh/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/ZWVl//7+/v////////////////////////////////////////////////////////////////+5ubn/Dg4O/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/319ff//////////////////////////////////////////////////////////////////////hoaG/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2ZmZv//////////////////////////////////////////////////////////////////////urq6/w0NDf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/fX19//////////////////////////////////////////////////////////////////////+Hh4f/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9mZmb//f39/////////////////////////////////////////////////////////////////7i4uP8NDQ3/AAAA/wAAAP8AAAD/AAAA/wAAAP9+fn7//////////////////////////////////////////////////////////////////////4aGhv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/ZWVl//7+/v////////////////////////////////////////////////////////////////+5ubn/Dg4O/wAAAP8AAAD/AAAA/35+fv//////////////////////////////////////////////////////////////////////hoaG/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2VlZf//////////////////////////////////////////////////////////////////////u7u7/wwMDP8AAAD/fX19//////////////////////////////////////////////////////////////////////+Ghob/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9mZmb//f39/////////////////////////////////////////////////////////////////7CwsP9+fn7//////////////////////////////////////////////////////////////////////4aGhv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/ZGRk//7+/v//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////hYWF/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2VlZf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+FhYX/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9lZWX//f39/////////////////////////////////////////////////////////////////////////////////////////////////////////////////4WFhf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/ZGRk//7+/v//////////////////////////////////////////////////////////////////////////////////////////////////////hISE/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2RkZP////////////////////////////////////////////////////////////////////////////////////////////////+FhYX/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9lZWX//f39/////////////////////////////////////////////////////////////////////////////////4SEhP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/Y2Nj//39/f//////////////////////////////////////////////////////////////////////hISE/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2RkZP////////////////////////////////////////////////////////////////+EhIT/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9kZGT//f39/////////////////////////////////////////////////4SEhP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/Y2Nj//39/f//////////////////////////////////////hISE/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2NjY/////////////////////////////////+EhIT/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9kZGT//f39/////////////////4SEhP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/Y2Nj////////////g4OD/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2tra/+Ghob/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" />
+
+        <!-- Custom PreStyle code is injected here -->
+        
+
+        <!-- Set the background colour of the document -->
+        <style>
+            body {
+                background: #0;
+                color: #cccccc;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+
+            canvas {
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                width: 100%;
+                height: 100%;
+            }
+            :-webkit-full-screen {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Custom Runner Styles */
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color:#00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button {
+                float: right;
+            }
+            div.gm4html5_login_button {
+                float: left;
+            }
+            div.gm4html5_login_header {
+                text-align: center;
+            }
+            /* END - Custom Runner Styles */
+            
+        
+            /* Keep the 1366x768 game surface at its native resolution and fit the canvas to the window (16:9) */
+            html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+            canvas#canvas {
+                position: absolute !important;
+                left: 50% !important;
+                top: 50% !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: translate(-50%, -50%) !important;
+                width: min(100vw, calc(100vh * 16 / 9)) !important;
+                height: min(100vh, calc(100vw * 9 / 16)) !important;
+            }
+        </style>
+
+        <!-- Custom PostStyle code is injected here -->
+        
+
+        <!-- Builtin injector for injecting flurry analytics code -->
+        
+    </head>
+
+    <!-- Custom PostHead code is injected here -->
+    
+
+    <!-- Custom PreBody code is injected here -->
+    
+
+    <body>
+        <!-- Custom BodyStart code is injected here -->
+        
+
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            
+            <!-- Builtin injector for splash screen -->
+            
+
+            <!-- Custom PreCanvas code is injected here -->
+            
+
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="1366" height="768" >
+                
+                <p>Your browser doesn't support HTML5 canvas.</p>
+            </canvas>
+            
+            <!-- Custom PostCanvas code is injected here -->
+            
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="dice_a_million.js?cachebust=2026951174"></script>
+
+        <!-- Builtin injector for injecting runner path -->
+        
+
+        <!-- Загрузка html5game.akrile (распаковщик: akrile.js) и запуск игры вместо window.onload = GameMaker_Init -->
+        <script type="module">
+        import Akrile from "./akrile.js";
+(function () {
+  "use strict";
+  var BASE = "html5game/";
+  var ARCHIVE = "html5game.akrile";
+  var MIME = {
+    png: "image/png", ogg: "audio/ogg", mp3: "audio/mpeg", js: "text/javascript",
+    csv: "text/csv;charset=utf-8", yy: "text/plain;charset=utf-8", json: "application/json",
+    ico: "image/x-icon", txt: "text/plain;charset=utf-8"
+  };
+  // Отсутствующие файлы с этими расширениями (игра сама ищет сохранения/конфиги) не уходят в сеть:
+  // XHR получает виртуальный ответ 404, поэтому в консоли нет красных ошибок. Добавьте сюда ещё, если нужно.
+  var QUIET_404 = /\.(ini|sav|txt)$/i;
+  var files = Object.create(null);           // "snd_click.mp3" -> blob: URL
+  var baseDir = new URL(BASE, document.baseURI).href;
+
+  function map(url) {
+    if (url == null) return url;
+    var s = typeof url === "string" ? url : (url instanceof URL ? url.href : String(url));
+    if (s.slice(0, 5) === "blob:" || s.slice(0, 5) === "data:") return url;
+    var abs;
+    try { abs = new URL(s, document.baseURI).href; } catch (e) { return url; }
+    if (abs.indexOf(baseDir) !== 0) return url;
+    var key = abs.slice(baseDir.length).split("#")[0].split("?")[0];
+    try { key = decodeURIComponent(key); } catch (e) {}
+    return files[key] || url;
+  }
+
+  function isQuiet404(url) {
+    if (url == null) return false;
+    var s = typeof url === "string" ? url : (url instanceof URL ? url.href : String(url));
+    var abs;
+    try { abs = new URL(s, document.baseURI).href; } catch (e) { return false; }
+    if (abs.indexOf(baseDir) !== 0) return false;
+    var key = abs.slice(baseDir.length).split("#")[0].split("?")[0];
+    try { key = decodeURIComponent(key); } catch (e) {}
+    return !files[key] && QUIET_404.test(key);
+  }
+
+  function fake404(x) {
+    function def(k, v) { Object.defineProperty(x, k, { configurable: true, value: v }); }
+    var text = (x.responseType === "" || x.responseType === "text");
+    def("readyState", 4); def("status", 404); def("statusText", "Not Found");
+    def("responseText", ""); def("response", text ? "" : null); def("responseURL", x.__q404);
+  }
+
+  // --- перехват загрузчиков, которыми пользуется рантайм ---
+  var xhrOpen = XMLHttpRequest.prototype.open;
+  var xhrSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    var a = Array.prototype.slice.call(arguments);
+    if (isQuiet404(url)) {                         // реальный запрос не выполняем
+      this.__q404 = new URL(String(url), document.baseURI).href;
+      this.__qsync = a[2] === false;
+      return xhrOpen.call(this, method, "data:,", a[2] === undefined ? true : a[2]);
+    }
+    this.__q404 = null;
+    a[1] = map(url);
+    return xhrOpen.apply(this, a);
+  };
+  XMLHttpRequest.prototype.send = function () {
+    if (!this.__q404) return xhrSend.apply(this, arguments);
+    var x = this;
+    if (x.__qsync) { fake404(x); return; }
+    setTimeout(function () {
+      fake404(x);
+      ["readystatechange", "load", "loadend"].forEach(function (t) {
+        x.dispatchEvent(t === "readystatechange" ? new Event(t) : new ProgressEvent(t));
+      });
+    }, 0);
+  };
+
+  var srcDesc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "src");
+  Object.defineProperty(HTMLImageElement.prototype, "src", {
+    configurable: true, enumerable: srcDesc.enumerable,
+    get: srcDesc.get,
+    set: function (v) { srcDesc.set.call(this, map(v)); }
+  });
+
+  if (window.fetch) {
+    var f0 = window.fetch;
+    window.fetch = function (input, init) {
+      if (typeof input === "string" || input instanceof URL) input = map(input);
+      return f0.call(this, input, init);
+    };
+  }
+  if (window.AudioWorklet) {
+    var add0 = AudioWorklet.prototype.addModule;
+    AudioWorklet.prototype.addModule = function (url, opts) { return add0.call(this, map(url), opts); };
+  }
+
+  // --- экран загрузки / ошибки ---
+  var note = document.createElement("div");
+  note.style.cssText = "position:fixed;inset:0;display:flex;align-items:center;justify-content:center;" +
+    "font:16px/1.5 sans-serif;color:#ccc;text-align:center;padding:24px;z-index:10;background:#000";
+  note.textContent = "Загрузка…";
+  document.body.appendChild(note);
+
+  function fail(msg) { note.textContent = msg; console.error(msg); }
+
+  // --- загрузка архива и запуск игры ---
+  var loaded = new Promise(function (res) {
+    if (document.readyState === "complete") res(); else window.addEventListener("load", function () { res(); });
+  });
+
+  (async function () {
+    try {
+      var resp = await fetch(ARCHIVE);
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      var buf = await resp.arrayBuffer();
+      var zip = await Akrile.loadAsync(buf);
+      var names = Object.keys(zip.files).filter(function (n) { return n.charAt(n.length - 1) !== "/"; });
+      for (var i = 0; i < names.length; i++) {
+        var n = names[i];
+        var bytes = await zip.file(n).async("uint8array");
+        var ext = n.slice(n.lastIndexOf(".") + 1).toLowerCase();
+        files[n] = URL.createObjectURL(new Blob([bytes], { type: MIME[ext] || "application/octet-stream" }));
+      }
+    } catch (e) {
+      fail("Не удалось загрузить " + ARCHIVE + " (" + e.message + "). Запускайте игру через HTTP-сервер, а не через file://.");
+      return;
+    }
+    await loaded;
+    note.remove();
+    GameMaker_Init();
+  })();
+})();
+
+        </script>
+
+        <!-- Builtin injector for injecting google analytics code -->
+        
+
+        <!-- Custom BodyEnd code is injected here -->
+        
+    </body>
+
+    <!-- Custom PostBody code is injected here -->
+    
+</html>
